@@ -15,9 +15,7 @@ export default class GeoLocationPositionScraper implements IPositionScraper {
   async getPosition(): Promise<ICoordinates> {
     const browser = await puppeteer.launch({
       // Point to existing Chrome install because NPM won't install Chromium
-      headless: true,
-      executablePath: this.chromeBin,
-      args: ['--no-sandbox', '--disable-setuid-sandbox'],
+      executablePath: this.chromeBin
     });
 
     const page = await browser.newPage();
