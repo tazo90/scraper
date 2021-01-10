@@ -1,10 +1,10 @@
 import { Router } from 'express';
 
-import geolocator from './routes/geolocator';
+import geolocation from './routes/geolocation';
 
 export default () => {
   const app = Router();
-  geolocator(app);
+  geolocation(app);
 
   return app;
 }

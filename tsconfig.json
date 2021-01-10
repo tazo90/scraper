@@ -9,9 +9,14 @@
     "strict": true,
     "noImplicitAny": true,
     "esModuleInterop": true,
+    "strictNullChecks":false
   },
   "include": [
-    "src",
+    "src/**/*.ts",
     "node_modules/puppeteer-tsd/src/index.d.ts"
+  ],
+  "exclude": [
+    "node_modules",
+    "**/*.spec.ts"
   ]
 }
